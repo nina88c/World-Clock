@@ -43,7 +43,16 @@ function updateTime() {
   //hour:minute:second:millisecond
   canadaTimeElement.innerHTML = `${canadaTime.format("h:mm:ss")}
         <small>${canadaTime.format("A")}</small>`;
+//Brazil
+  let brazilElement = document.querySelector("#brazil");
+  let brazilDateElement = brazilElement.querySelector(".date");
+  let brazilTimeElement = brazilElement.querySelector(".time");
+  let brazilTime = moment().tz("Brazil/East");
 
+  brazilDateElement.innerHTML = brazilTime.format("MMMM	Do YYYY");
+  //hour:minute:second:millisecond
+  brazilTimeElement.innerHTML = `${brazilTime.format("h:mm:ss")}
+        <small>${brazilTime.format("A")}</small>`;
 }
 
 
