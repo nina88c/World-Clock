@@ -32,6 +32,18 @@ function updateTime() {
   //hour:minute:second:millisecond
   dubaiTimeElement.innerHTML = `${dubaiTime.format("h:mm:ss")}
         <small>${dubaiTime.format("A")}</small>`;
+
+//Canada
+  let canadaElement = document.querySelector("#canada");
+  let canadaDateElement = canadaElement.querySelector(".date");
+  let canadaTimeElement = canadaElement.querySelector(".time");
+  let canadaTime = moment().tz("Canada/Central");
+
+  canadaDateElement.innerHTML = canadaTime.format("MMMM	Do YYYY");
+  //hour:minute:second:millisecond
+  canadaTimeElement.innerHTML = `${canadaTime.format("h:mm:ss")}
+        <small>${canadaTime.format("A")}</small>`;
+
 }
 
 
