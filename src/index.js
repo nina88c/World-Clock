@@ -52,7 +52,11 @@ function updateTime() {
   brazilDateElement.innerHTML = brazilTime.format("MMMM	Do YYYY");
   //hour:minute:second:millisecond
   brazilTimeElement.innerHTML = `${brazilTime.format("h:mm:ss")}
-        <small>${brazilTime.format("A")}</small>`;
+        <small>${brazilTime.format("A")}</small>`
+  ;
+  setTimeout(() => {
+    updateCity(event);
+  }, 1000);
 }
 
 
